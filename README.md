@@ -1,5 +1,20 @@
 # Construction-Site PPE Safety Detection - MAICEN-0526 Group 5
 
+## Project Team
+
+**MAICEN-0526 - Group 5**
+
+| Team Member | Role |
+|---|---|
+| Dru | Group Lead |
+| Shaheen | Group Member |
+| Ghandoor | Group Member |
+| Ahamed | Group Member |
+
+This project, including its experimental work, analysis, documentation and associated deliverables, was completed collaboratively by **MAICEN-0526 Group 5**.
+
+---
+
 ## Project Overview
 
 This project investigates computer-vision-based detection of Personal Protective Equipment (PPE) and selected safety conditions on construction sites using YOLO11 object detection.
