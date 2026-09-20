@@ -630,8 +630,10 @@ For detailed analysis and final submission material, refer to:
 
 The project demonstrates that YOLO11 Nano can achieve strong held-out performance on the selected construction-site PPE dataset while still exhibiting important generalisation weaknesses on external imagery.
 
-The M1-to-M2 experiment also demonstrates why iterative model development should not be judged using a single headline metric. Targeted augmentation increased recall and improved held-out bare-arms performance, but other metrics decreased.
+As an applied research extension to the reference configuration, **Group 5 adopted YOLO11 Nano in place of the referenced YOLOv8 architecture and an 85/9/6 train/validation/test dataset split in place of the referenced 80/20 split**. These choices enabled exploration of an alternative contemporary lightweight YOLO architecture while maintaining distinct held-out validation and test sets. The configurations were applied consistently across M1 and M2, preserving controlled experimental comparability and providing additional practical insight while retaining the core object-detection and evaluation framework.
 
-The principal technical lesson is therefore that **high internal evaluation performance must be considered together with external challenge testing, error analysis, ontology design, reproducibility and governance**.
+The M1-to-M2 experiment further demonstrates why iterative model development should not be judged using a single headline metric. Targeted augmentation increased recall and improved held-out bare-arms performance, while precision and mAP50-95 decreased, demonstrating a controlled performance trade-off rather than universal improvement.
+
+The principal technical lesson is therefore that **high internal evaluation performance must be considered together with external challenge testing, error analysis, ontology design, reproducibility and governance**. External generalisation remains an area for further validation because M2 was not evaluated on the same external challenge set.
 
 For a safety-related AECO application, the appropriate role of the model is to support qualified human review rather than replace human safety judgement.
