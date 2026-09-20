@@ -15,6 +15,17 @@ This project, including its experimental work, analysis, documentation and assoc
 
 ---
 
+## Submission Deliverables
+
+The final submission documents are provided below:
+
+- [Mini Report - Construction-Site PPE Safety Detection](docs/submission/M4U3_Mini_Report_Executive_Portrait_v1.2(Submission).pdf)
+- [Presentation - Construction-Site PPE Safety Detection](docs/submission/M4U3_Computer_Vision_Construction_PPE_Safety_Detection_v1.2(Submission).pdf)
+
+The complete reproducibility notebook, experimental evidence, error analysis, governance and licensing documentation, and supporting results are available within this repository.
+
+---
+
 ## Project Overview
 
 This project investigates computer-vision-based detection of Personal Protective Equipment (PPE) and selected safety conditions on construction sites using YOLO11 object detection.
@@ -104,6 +115,12 @@ Two YOLO11 Nano experiments were compared.
 | M2 | Targeted Augmentation - 2x | 6,574 | 340 | 231 | Evaluate targeted augmentation |
 
 The validation and test partitions remained unchanged between M1 and M2. This supports a controlled comparison because the principal experimental change was the targeted augmentation applied to the M2 training data.
+
+### Rationale for Adaptations to the Reference Model Architecture and Dataset Split
+
+As an applied research extension to the reference configuration, **YOLO11 Nano** was adopted to explore an alternative contemporary lightweight Ultralytics model architecture, while an **85/9/6 train/validation/test dataset split** was used to maintain distinct held-out validation and test sets. These configurations were applied consistently across M1 and M2, preserving controlled experimental comparability, and are explicitly documented to ensure transparency and reproducibility.
+
+This extension also provided practical insight into applying an alternative YOLO architecture and dataset-splitting strategy to the same AECO object-detection problem while retaining the core experimental and evaluation framework.
 
 ---
 
@@ -317,7 +334,7 @@ Trade-offs included:
 
 The results therefore demonstrate an experimental trade-off rather than evidence that M2 is universally superior to M1.
 
-M2 was not subsequently tested using the same external challenge-test protocol. Accordingly, **no claim is made that M2 improved external real-world generalisation**.
+As M2 was completed after the external challenge-testing phase, repeat external evaluation was outside the completed experimental scope. Accordingly, external-generalisation improvement is **not inferred** and remains a priority for future validation.
 
 ---
 
@@ -420,11 +437,11 @@ The absence of the requested individual validation-prediction screenshots remain
 
 The primary reproducibility notebook is:
 
-`notebooks/MAICEN_0526_Group_5_Construction_PPE_Safety_Detection_Reproducibility_v0_2.ipynb`
+[`notebooks/MAICEN_0526_Group_5_Construction_PPE_Safety_Detection_Reproducibility_v0_2.ipynb`](notebooks/MAICEN_0526_Group_5_Construction_PPE_Safety_Detection_Reproducibility_v0_2.ipynb)
 
 A corresponding Python representation is also provided:
 
-`notebooks/maicen_0526_group_5_construction_ppe_safety_detection_reproducibility_v0_2.py`
+[`notebooks/maicen_0526_group_5_construction_ppe_safety_detection_reproducibility_v0_2.py`](notebooks/maicen_0526_group_5_construction_ppe_safety_detection_reproducibility_v0_2.py)
 
 ### Verified Notebook Environment
 
@@ -437,7 +454,7 @@ The successfully executed notebook recorded:
 
 The repository also includes:
 
-`requirements.txt`
+[`requirements.txt`](requirements.txt)
 
 ### Important Reproducibility Boundary
 
@@ -537,7 +554,7 @@ It should not independently be used to:
 
 Detailed governance analysis is provided in:
 
-`docs/governance_and_licensing.md`
+[`docs/governance_and_licensing.md`](docs/governance_and_licensing.md)
 
 ---
 
@@ -576,7 +593,10 @@ construction-ppe-safety-detection-MAICEN-0526-Group-5/
 |-- docs/
 |   |-- error_analysis.md
 |   |-- governance_and_licensing.md
-|   `-- reproducibility_notes.md
+|   |-- reproducibility_notes.md
+|   `-- submission/
+|       |-- M4U3_Mini_Report_Executive_Portrait_v1.2(Submission).pdf
+|       `-- M4U3_Computer_Vision_Construction_PPE_Safety_Detection_v1.2(Submission).pdf
 |
 `-- results/
     |-- M1 model performance evidence
@@ -595,8 +615,10 @@ The complete exported YOLO11 dataset archive is retained separately within the s
 
 ## Supporting Documentation
 
-For detailed analysis, refer to:
+For detailed analysis and final submission material, refer to:
 
+- [Mini Report - Construction-Site PPE Safety Detection](docs/submission/M4U3_Mini_Report_Executive_Portrait_v1.2(Submission).pdf) - final two-page executive mini report
+- [Presentation - Construction-Site PPE Safety Detection](docs/submission/M4U3_Computer_Vision_Construction_PPE_Safety_Detection_v1.2(Submission).pdf) - final presentation slides
 - [`docs/error_analysis.md`](docs/error_analysis.md) - false-negative analysis, evidence limitations and prioritised iteration plan
 - [`docs/governance_and_licensing.md`](docs/governance_and_licensing.md) - dataset/model licensing, privacy, safety, bias, data minimisation and human oversight
 - [`docs/reproducibility_notes.md`](docs/reproducibility_notes.md) - dataset versions, experimental configurations, environment, reproducibility boundary and reproduction procedure
